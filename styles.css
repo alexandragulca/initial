@@ -1,0 +1,749 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-family: 'Cinzel', serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0056a3, #ffc72c);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0056a3;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #003b70;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #0056a3, #0077b6);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #ffc72c;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 86, 163, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 86, 163, 0.4);
+  color: #ffc72c;
+  border-color: #ffd75e;
+}
+
+/* Header Styles */
+header {
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0056a3;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.logo:before {
+  content: 'ST';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #0056a3;
+  color: #ffc72c;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a:not(.btn-primary):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffc72c;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:not(.btn-primary):hover:after {
+  width: 100%;
+}
+
+nav ul li a.btn-primary {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 80px;
+  background: linear-gradient(135deg, #e6f2ff 0%, #cce5ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/norse-pattern.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-placeholder {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(45deg, #0056a3, #0077b6);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffc72c;
+  font-size: 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 86, 163, 0.3);
+  border: 8px solid #ffc72c;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-placeholder:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/norse-pattern.png');
+  opacity: 0.1;
+}
+
+.profile-placeholder span {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  font-size: 5rem;
+}
+
+/* About Section */
+.about {
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-stats {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+  flex-basis: calc(33.333% - 30px);
+  padding: 30px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0056a3;
+  margin-bottom: 10px;
+  font-family: 'Cinzel', serif;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Services Section */
+.services {
+  background-color: #f9f9f9;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  border-top: 4px solid #0056a3;
+  position: relative;
+}
+
+.service-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 4px;
+  background-color: #ffc72c;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-top-color: #ffc72c;
+}
+
+.service-card:hover:before {
+  background-color: #0056a3;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Skills Section */
+.skills {
+  background-color: white;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.skill-category h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #0056a3;
+  border-bottom: 2px solid #ffc72c;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #0056a3, #0077b6);
+  border-radius: 5px;
+  position: relative;
+}
+
+.skill-level:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #ffc72c;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateX(50px);
+  border-left: 5px solid #0056a3;
+}
+
+.testimonial-card:before {
+  content: '\201C';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: #ffc72c;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.author-title {
+  color: #777;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #0056a3;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  color: #ffc72c;
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 8px;
+  margin: 0 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0056a3;
+  transform: scale(1.3);
+  border: 2px solid #ffc72c;
+}
+
+/* Contact Section */
+.contact {
+  background-color: white;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-methods {
+  margin-top: 30px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #ffc72c;
+  background-color: #0056a3;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.method-details {
+  font-size: 1.1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0056a3;
+  box-shadow: 0 0 0 2px rgba(0, 86, 163, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #003057;
+  color: white;
+  padding: 50px 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ffc72c, #ffd75e, #ffc72c);
+}
+
+footer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/norse-pattern.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffc72c;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .container,
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-image {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .profile-placeholder {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .about-stats {
+    margin-top: 30px;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  header {
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    display: none; /* In a real project, would implement a mobile menu */
+  }
+  
+  .services-grid,
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-item {
+    flex-basis: 100%;
+  }
+  
+  .testimonial-card {
+    padding: 30px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
